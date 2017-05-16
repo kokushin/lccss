@@ -10,6 +10,8 @@
 
 SMACSS + MindBEMding
 
+> 要素のネスト
+
 ```html
 <div class="block">
   <div class="block_element">
@@ -26,6 +28,21 @@ SMACSS + MindBEMding
 
 - 要素間は `_` で繋いでいく
 - CSSは原則としてネストしない（詳細度をフラットにするため）
+
+> Modifier
+
+```html
+<div class="block block-modifier">
+  <div class="block_element block_element-modifier">
+    <div class="block_element_element block_element_element-modifier"></div>
+  </div>
+</div>
+```
+
+```css
+.block.block-modifier { ... }
+.block.block_element_element-modifier { ... } 
+```
 
 ### コンポーネント
 
@@ -54,3 +71,7 @@ SMACSS + MindBEMding
 ```
 
 ※基本的に単体で使用せず、他のクラスと合わせて使用する
+
+---
+
+
