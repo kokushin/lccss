@@ -6,8 +6,7 @@
 
 - 原則として `Layout` または `Component` に属さなければならない
 - `Component` 内に属するコンポーネント要素（ボタン等）は、例えデザインが共通であってもコンポーネント内の要素としてクラスを指定する
-
-クラスの命名規則は下記の通りとする
+- 単語の記法にはキャメルケースを推奨（接頭辞に `-` 、ネスト・Modifierに `_` を使っているため。しかし状況に応じて変更してもよい）
 
 #### Layout
 
@@ -37,7 +36,7 @@
 
 - どのページでも共通して流用できるような要素群に対して記述
 
-#### ステート
+#### State
 
 接頭辞に `is-` を付与
 
@@ -52,7 +51,7 @@
 - 要素の状態を変更する場合に記述
 - 基本的に単体で使用せず、他のクラスと合わせての使用を推奨
 
-#### JavaScript制御
+#### JavaScript Control
 
 接頭辞に `js-` を付与
 
@@ -63,6 +62,22 @@
 
 - JavaScriptによる操作対象の要素にのみ記述
 - このクラスに対してスタイルの適用は禁止とする
+- 基本的に単体で使用せず、他のクラスと合わせての使用を推奨
+
+#### Utility
+
+接頭辞に `u-` を付与
+
+```html
+<p class="u-textCenter">Qui ad culpa aute ad nulla officia sit aliquip excepteur.</p>
+```
+
+```css
+.u-textCenter { text-align: center }
+```
+
+- 要素に対して固有のスタイルを適用させたいときに記述
+- 使いまわすことを前提とした設計にする
 - 基本的に単体で使用せず、他のクラスと合わせての使用を推奨
 
 ---
@@ -104,7 +119,7 @@ SMACSS + MindBEMding
 ```css
 .block._modifier { ... }
 .block_element._modifier { ... }
-.block_element_element._modifier { ... } 
+.block_element_element._modifier { ... }
 ```
 
 - Modifierは先頭に `_` を記述
