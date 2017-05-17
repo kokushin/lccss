@@ -4,9 +4,12 @@
 
 ## 命名規則
 
+- 原則として `Layout` または `Component` に属さなければならない
+- `Component` 内に属するコンポーネント要素（ボタン等）は、例えデザインが共通であってもコンポーネント内の要素としてクラスを指定する
+
 クラスの命名規則は下記の通りとする
 
-#### レイアウト
+#### Layout
 
 接頭辞に `l-` を付与
 
@@ -20,7 +23,7 @@
 
 - 外枠や内枠など、枠組みを形成する要素に対して記述
 
-#### コンポーネント
+#### Component
 
 接頭辞に `c-` を付与
 
@@ -124,6 +127,7 @@ SMACSS + MindBEMding
       <article class="c-card _entry _1">
         <h2 class="c-card_title">Entry title</h2>
         <p class="c-card_read">Sint est sunt cillum Lorem irure irure laborum adipisicing officia consectetur elit aliquip.</p>
+        <div class="c-card_button"><a href="#">Button</a></div>
         <ul class="c-card_category">
           <li class="c-card_category_item _1"><a href="#">Sint est sunt cillum 1</a></li>
           <li class="c-card_category_item _2"><a href="#">Sint est sunt cillum 2</a></li>
@@ -136,6 +140,7 @@ SMACSS + MindBEMding
       <article class="c-card _archive _1">
         <h2 class="c-card_title">Entry title</h2>
         <p class="c-card_read">Sint est sunt cillum Lorem irure irure laborum adipisicing officia consectetur elit aliquip.</p>
+        <div class="c-card_button"><a href="#">Button</a></div>
         <ul class="c-card_category">
           <li class="c-card_category_item _1"><a href="#">Sint est sunt cillum 1</a></li>
           <li class="c-card_category_item _2"><a href="#">Sint est sunt cillum 2</a></li>
@@ -175,6 +180,7 @@ SMACSS + MindBEMding
 .c-card._3 { ... }
 .c-card_title { ... }
 .c-card_read { ... }
+.c-card_button { ... }
 .c-card_category { ... }
 .c-card_category_item { ... }
 .c-card_category_item._1 { ... }
