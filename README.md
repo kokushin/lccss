@@ -121,7 +121,7 @@ LCCSS（ルックス）は、各要素のカテゴライズを「レイアウト
 
 ## 設計思想
 
-__影響を受けたもの__
+### 影響を受けたもの
 
 > SMACSS、Enduring CSS（ECSS）、MindBEMding（BEM）
 
