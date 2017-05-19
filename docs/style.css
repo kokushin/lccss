@@ -120,6 +120,21 @@
   color: #000;
 }
 
+.c-button {
+  text-align: center;
+}
+.c-button._more {
+  margin-top: 80px;
+}
+.c-button a {
+  display: inline-block;
+  padding: 1.2em 6em;
+  border: 1px solid #eee;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
 .c-footer {
   padding: 60px 0;
   text-align: center;
