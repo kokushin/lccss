@@ -55,7 +55,7 @@
 .c-header_logo {
   font-size: 42px;
 }
-.c-header_read {
+.c-header_lead {
   font-size: 14px;
   margin-top: 2em;
 }
@@ -97,7 +97,7 @@
   border-left: 1px solid #e2e2e2;
   border-right: 1px solid #e2e2e2;
 }
-.c-card_read {
+.c-card_lead {
   margin-top: 1em;
   line-height: 1.5;
 }

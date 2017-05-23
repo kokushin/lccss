@@ -144,8 +144,8 @@ CSSカテゴライズはSMACSSを参考にしているが、LCCSSでは「ベー
 
 - 要素は `_` で繋ぐ
 - 階層は制限しない（余計な思考時間を省く）
-- 詳細度を一定に保つためセレクタはネストしない（違うスタイルを適用させる際はModifierを利用して管理する）
 - 単語の綴りにはキャメルケースを推奨（接頭辞に `-` 、要素のネスト・Modifierに `_` を使っているため。しかし状況に応じて変更してもよい）
+- 詳細度を一定に保つためセレクタのネストは非推奨（ただし、親をStateとした場合のネストは可能とする）
 
 > NG
 
@@ -159,6 +159,7 @@ CSSカテゴライズはSMACSSを参考にしているが、LCCSSでは「ベー
 ```css
 .parent { ... }
 .child { ... }
+.is-active .child { ... }
 ```
 
 ### Modifier
@@ -189,7 +190,7 @@ CSSに関してはプリプロセッサーを利用した開発を前提とし�
 ```html
 <header class="c-header">
   <h1 class="c-header_title">Website</h1>
-  <p class="c-header_read">Sint est sunt cillum Lorem irure irure laborum adipisicing officia consectetur elit aliquip.</p>
+  <p class="c-header_lead">Sint est sunt cillum Lorem irure irure laborum adipisicing officia consectetur elit aliquip.</p>
 </header>
 
 <main class="l-content">
@@ -198,7 +199,7 @@ CSSに関してはプリプロセッサーを利用した開発を前提とし�
     <section class="l-entry">
       <article class="c-card _entry _1">
         <h2 class="c-card_title">Entry title</h2>
-        <p class="c-card_read">Sint est sunt cillum Lorem irure irure laborum adipisicing officia consectetur elit aliquip.</p>
+        <p class="c-card_lead">Sint est sunt cillum Lorem irure irure laborum adipisicing officia consectetur elit aliquip.</p>
         <div class="c-card_button"><a href="#">Button</a></div>
         <ul class="c-card_category">
           <li class="c-card_category_item _1"><a href="#">Sint est sunt cillum 1</a></li>
@@ -211,7 +212,7 @@ CSSに関してはプリプロセッサーを利用した開発を前提とし�
     <section class="l-archive">
       <article class="c-card _archive _1">
         <h2 class="c-card_title">Entry title</h2>
-        <p class="c-card_read">Sint est sunt cillum Lorem irure irure laborum adipisicing officia consectetur elit aliquip.</p>
+        <p class="c-card_lead">Sint est sunt cillum Lorem irure irure laborum adipisicing officia consectetur elit aliquip.</p>
         <div class="c-card_button"><a href="#">Button</a></div>
         <ul class="c-card_category">
           <li class="c-card_category_item _1"><a href="#">Sint est sunt cillum 1</a></li>
@@ -241,7 +242,7 @@ CSSに関してはプリプロセッサーを利用した開発を前提とし�
 /* Component: header */
 .c-header { ... }
 .c-header_title { ... }
-.c-header_read { ... }
+.c-header_lead { ... }
 
 /* Component: footer */
 .c-footer { ... }
@@ -253,7 +254,7 @@ CSSに関してはプリプロセッサーを利用した開発を前提とし�
 .c-card._2 { ... }
 .c-card._3 { ... }
 .c-card_title { ... }
-.c-card_read { ... }
+.c-card_lead { ... }
 .c-card_button { ... }
 .c-card_category { ... }
 .c-card_category_item { ... }
@@ -278,7 +279,7 @@ LCCSSを適用したデモは [こちら](https://kokushin.github.io/lccss/)
 
 ## 更新履歴
 
-Version 1.1.0 / Updated date: 2017/05/18
+Version 1.1.1 / Updated date: 2017/05/18
 
 - [1.1.0] Themeを追加
 
